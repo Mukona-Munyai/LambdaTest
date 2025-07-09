@@ -5,7 +5,7 @@ client = boto3.client('lambda')
 
 response = client.invoke(
     FunctionName='BasicCalc',
-    Payload=json.dumps({"num1": 987, "num2": 243, "operation": "add"})
+    Payload=json.dumps({"num1": 987, "num2": 243, "operation": "multiply"})
 )
 
 response_payload = response['Payload'].read()
